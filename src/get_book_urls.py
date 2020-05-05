@@ -60,6 +60,7 @@ def main():
                         if search_r.status_code == 200:
                             search_r.encoding = 'utf-8'
                             search_tree = html.fromstring(search_r.content)
+                            search_tree.make_links_absolute(search_r.url)
 
                             try:
                                 for book_page_url in search_tree.xpath('//a[@class="library-title"]/@href'):
