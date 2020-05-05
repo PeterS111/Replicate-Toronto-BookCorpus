@@ -8,8 +8,9 @@ import unicodedata
 from pathlib import Path
 from typing import Dict, List
 
-from blingfire import text_to_sentences
 import requests
+from blingfire import text_to_sentences
+from lxml import html
 from requests import (ConnectionError, RequestException, Response, Session,
                       Timeout)
 
